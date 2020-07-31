@@ -19,10 +19,10 @@ app.use(cors())
 app.use(express.json());
 routes(app)
 
-app.use(express.static(path.join(__dirname, 'client/nerdysoft/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 //app.use('/', express.static('./client/my-app/build'));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/nerdysoft/build/index.html'));
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 
