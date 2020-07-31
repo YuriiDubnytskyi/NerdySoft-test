@@ -1,0 +1,24 @@
+{
+  "name": "nerdysoft",
+  "version": "1.0.0",
+  "description": "nerdysoft web-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nerdysoft",
+    "web-app"
+  ],
+  "author": "Yurii Dubnytskyi",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^5.9.14",
+    "nodemon": "^2.0.4"
+  }
+}
