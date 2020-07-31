@@ -1,0 +1,8 @@
+export const SET_PAGE_OF_ITEMS = 'SET_PAGE_OF_ITEMS'
+export const SET_PAGER = 'SET_PAGER'
+export const SET_POSTS = 'SET_POSTS'
+export const SET_VALUE = 'SET_VALUE'
+export const DELETE_VALUE = 'DELETE_VALUE'
+export const CHANCHE_SEARCH = 'CHANCHE_SEARCH'
+export const SET_POST_ITEM = 'SET_POST_ITEM'
+export const DELETE_POST_ITEM = 'DELETE_POST_ITEM'

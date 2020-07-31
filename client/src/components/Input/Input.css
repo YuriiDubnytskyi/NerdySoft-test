@@ -1,0 +1,25 @@
+.input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    color:#fff;
+    text-align: center;
+    background-color: rgb(62, 62, 85);
+}
+.input{
+    padding: 5px;
+    margin: 10px;
+}
+.input-main{
+    display: flex;
+}
+.btn-group{
+    display: flex;
+}
+@media only screen and (max-width: 500px) {
+    .btn-group{
+        flex-direction: column;
+    }
+}

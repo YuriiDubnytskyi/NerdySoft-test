@@ -1,0 +1,87 @@
+.post-container{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.item-group-btn{
+    display: flex;
+    flex-direction: column;
+}
+.post-info{
+    width: 35%;
+}
+.post-info_title,.post-info_description{
+    font-size: 20px;
+}
+.post-info_title-text,.post-info_description-text{
+    background-color: darkgrey;
+    padding: 10px;
+    border-radius: 20px;
+}
+.post-info_description-text{
+    height: 125px;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+.similar-post_item{
+    background-color: darkgrey;
+    padding: 10px;
+    border-radius: 15px;
+}
+.similar-post_title{
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.similar-post_btn{
+    width: 100px;
+    background-color: #fff;
+    color:#000;
+    padding: 5px;
+    border-radius: 15px;
+}
+.item-group-btn--save,
+.item-group-btn--delete,
+.item-group-btn--update,
+.item-group-btn--cancel,
+.item-group-btn--home{
+    width: 150px;
+    background-color: #fff;
+    color:#000;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.similar-post_btn:hover,
+.item-group-btn--save:hover,
+.item-group-btn--delete:hover,
+.item-group-btn--update:hover,
+.item-group-btn--cancel:hover,
+.item-group-btn--home:hover{
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+@media only screen and (max-height: 600px) {
+    .post-container{
+        flex-direction: column;
+    }
+    .post-info,.similar-post{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .item-group-btn{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 60px;
+    }
+    .post-info_textarea{
+        width: 90%;
+    }
+    .item-group-btn--save,
+    .item-group-btn--delete,
+    .item-group-btn--update,
+    .item-group-btn--cancel,
+    .item-group-btn--home{
+        width: 100px;
+        margin: 5px;
+    }
+}

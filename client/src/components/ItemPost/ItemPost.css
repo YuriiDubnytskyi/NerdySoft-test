@@ -1,0 +1,45 @@
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: #7a7a7a;
+    color:#fff;
+    margin:0 18px!important;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+.card-title{
+    font-family: 'Roboto';
+    font-size: 20px;
+    padding: 10px 0;
+}
+.card-btn1{
+    width: 150px;
+    background-color: #fff;
+    color:#000;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: auto auto 20px auto;
+}
+.card-btn:hover{
+    background-color: rgb(167, 167, 167);
+    cursor: pointer;
+}
+.card-time{
+    margin: 10px 0;
+}
+.card-text{
+    width: 80%;
+    margin: 0 auto;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    word-break: break-word;
+}
+@media only screen and (max-height: 600px) {
+    .card{
+        height: 200px!important;
+        margin: 20px 0!important;
+    }
+}

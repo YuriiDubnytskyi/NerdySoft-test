@@ -1,0 +1,26 @@
+.btn{  
+    height: 40px;
+    font-size: 15px;  
+}
+.btn-search,.btn-clear{
+    margin: auto;
+}
+.search,.clear,.post{
+    border-radius: 20px;
+    width: 70px;
+    background-color: rgb(97, 88, 102);
+    color: #fff;
+}
+.search:hover,.add:hover,.clear:hover,.post:hover{
+    background-color: rgb(52, 49, 53);
+    cursor: pointer;
+}
+.btn-add{
+    margin: auto 0;
+}
+.add{
+    border-radius: 20px;
+    width: 100px;
+    background-color: rgb(97, 88, 102);
+    color: #fff;
+}

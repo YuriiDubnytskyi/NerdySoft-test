@@ -1,0 +1,24 @@
+.pagination{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.pagination button{
+    padding: 10px;
+    border:solid 1px #000;
+    
+}
+.active button,.active:hover button{
+    color:#000;
+    background-color: rgb(104, 104, 104);
+}
+.pagination button:hover{
+    cursor: pointer;
+    background-color: rgb(160, 160, 160);
+}
+@media only screen and (max-width: 500px) {
+    .pagination{
+        padding-bottom: 100px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,27 @@
+.main-container{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+.listPost{
+    flex-grow: 1;
+}
+.functional-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-link{
+    margin: auto 0;
+}
+@media only screen and (max-width: 500px) {
+    .functional-container{
+        flex-direction: column
+    }
+    .add-link{
+        width: 100px;
+        margin: 0 auto;
+    
+    }
+}
