@@ -22,6 +22,11 @@ const App = (props) => {
     getPosts().then((res)=>{
          props.setPost([...res.data])
     })
+    setInterval(()=>{
+      getPosts().then((res)=>{
+        props.setPost([...res.data])
+      })
+    },1000 * 60 * 5)
   },[])
   
   return (

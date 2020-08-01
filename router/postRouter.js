@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const {create,postUpdate,postDelete,getAllPost,getSimilar} = require('../services/postService.js');
+const {create,postUpdate,postDelete,getAllPost,getSimilar,filterPost} = require('../services/postService.js');
 //validation to do
 
 const router = Router();
@@ -19,6 +19,9 @@ router.post('/create', async (req, res) => {
         } else {
             res.status(400).json('error has occured');
         }
+    }).then(()=>{
+        console.log('added')
+        filterPost()
     })
 })
 
@@ -47,6 +50,9 @@ router.delete("/deletePost/:id", function(req, res){
         } else {
             res.json({comment:"Error",status:500});
         }
+    }).then(()=>{
+        console.log('deleted')
+        filterPost()
     })
 });
 

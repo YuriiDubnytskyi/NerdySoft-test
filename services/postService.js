@@ -44,6 +44,7 @@ const getAllPost = async () => {
     }) 
     return await promise
 }
+
 const filterSimilar = (title,description,data,id = '') =>{
     let arr = []
     let t = title.split(' ').map(el=>el.toLowerCase())
@@ -73,5 +74,14 @@ const getSimilar = async (title,description,id) =>{
     let similarArr = await filterSimilar(title,description,array,id)
     return similarArr
 }
+const filterPost = async () =>{
+    let array = await getAllPost()
+    array.forEach((el)=>{
+        let similarArr = filterSimilar(el.title,el.description,array,el.id)
+        postUpdate(el.id,{similar:similarArr})
+        console.log("update list")
+    })
+}
 
-module.exports = {create,postUpdate,postDelete,getAllPost,getSimilar}
+
+module.exports = {create,postUpdate,postDelete,getAllPost,getSimilar,filterPost}

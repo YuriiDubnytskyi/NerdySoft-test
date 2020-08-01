@@ -61,7 +61,8 @@ const ItemProfile = (props) => {
         })
         
     }
-    const toHome = (id) =>{      
+    const toHome = () =>{
+        props.changeSearch(true)      
         history.push('/')      
     }
     const readSimilar = async (id) =>{

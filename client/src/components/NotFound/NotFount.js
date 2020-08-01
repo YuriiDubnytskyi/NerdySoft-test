@@ -1,8 +1,17 @@
 import * as React from 'react';
 import './NotFound.css'
-import {Link} from 'react-router-dom'
+import {connect} from "react-redux";
+import { bindActionCreators } from 'redux';
+import {changeSearch} from '../../store/actions/actions'
+import { useHistory } from 'react-router-dom';
+
 
 const NotFound = (props) => {
+  const history = useHistory()
+  const toHome = () =>{
+    props.changeSearch(true)      
+    history.push('/')      
+  }
   return (
       <div>
           <div className="container-notF">
@@ -64,10 +73,19 @@ const NotFound = (props) => {
   </svg>
     
   <h2>we are working on it</h2>
-  <Link to='/'>Home</Link>
+  <a className='btn--home' onClick={toHome}>{'=>Go Home<='}</a>
 </div>
       </div>
   );
 };
+const mapDispachToProps = (dispatch) => {
+  return {
+      dispatch,
+      ...bindActionCreators({
+          changeSearch
+      },dispatch)
+  }
+}
 
-export default NotFound;
+export default connect(null,mapDispachToProps)(NotFound)
+
