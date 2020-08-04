@@ -7,7 +7,7 @@ import './Pagination.css'
 const Pagination = (props) => {
     const [pageNumber,setPageNumber] = useState(1)
     useEffect(()=>{
-        setPage(pageNumber) 
+        setPage(props.pager.currentPage || pageNumber) 
     },[props.filter])
 
     const setPage = (page) => {
@@ -24,7 +24,7 @@ const Pagination = (props) => {
         if(props.search){
             props.setPager(pager);
             props.setPageOfItems(pageOfItems);
-        }  
+        }
     }
 
     const getPager = (totalItems, currentPage, pageSize) => {

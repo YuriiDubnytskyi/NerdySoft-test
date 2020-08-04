@@ -39,14 +39,19 @@ const ItemProfile = (props) => {
     }
 
     const save = () =>{
-        setSaving({saving:true,coment:'saving'})
-        updatePost({id:props.item._id,title:titleU,description:descriptionU}).then(()=>{           
-            getPosts().then((res)=>{
-                props.setPost([...res.data])
-                props.changeSearch(true)
-                setSaving({saving:true,coment:'Save'})
-            })           
-        })
+        if(titleU !== '' || descriptionU !== ''){
+           setSaving({saving:true,coment:'saving'})
+            updatePost({id:props.item._id,title:titleU,description:descriptionU}).then(()=>{           
+                getPosts().then((res)=>{
+                    props.setPost([...res.data])
+                    props.changeSearch(true)
+                    setSaving({saving:true,coment:'Save'})
+                })           
+            }) 
+        }else{
+            alert('Title or Description Empty')
+        }
+        
         
     }
     const deleteItem = () =>{

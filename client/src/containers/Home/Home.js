@@ -12,14 +12,15 @@ import {Link} from 'react-router-dom'
 const Home = (props) => {
     const [inputV,setInputV] = useState('')
     const [filterPosts, setFilterPosts] = useState(['q'])
-    useEffect(()=>{
+    
+   useEffect(()=>{
         if(props.inputValue === ''){
             setFilterPosts(props.posts)
         }else{
             setInputV(props.inputValue)
+            setFilterPosts(props.postPage)
         }
     },[props.posts])
-   
     const filterP = () =>{       
         const updatedList = props.posts.filter((item)=>{
           return item.title.toLowerCase().search(
@@ -34,6 +35,7 @@ const Home = (props) => {
         props.changeSearch(true)
         console.log(filterPosts)
     }
+    
     const deleteInput = () => {
         setFilterPosts([...props.posts])
         props.deleteValue()
@@ -59,7 +61,6 @@ const Home = (props) => {
                     filter={filterPosts}  
                     pager={props.pager} 
                     setPager={props.setPager} 
-                    inputValue={props.inputValue} 
                     search={props.search}
                 />
             </div>
